@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 #Lectura de Documento 
-source = pd.read_csv('C:/Users/dffue/S7_proyecto-1/vehicles_us.csv')
+source = pd.read_csv('vehicles_us.csv')
 
 #Header insertion
 st.header('Proyecto 7, Desarrollo Web: Automoviles Usados')
