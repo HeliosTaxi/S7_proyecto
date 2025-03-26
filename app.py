@@ -14,7 +14,8 @@ hist_button = st.button('Generar Histograma')
 
 if hist_button:
     st.write('Generado: Histograma con datos para la promocion de vehiculos usados')
-    fig = px.histogram(source, x='odometer')
+    fig = px.histogram(source, x='odometer',
+                       x_label='Odometer (KM)')
     st.plotly_chart(fig, use_container_width=True)
 
 #Scatterplot creation
@@ -22,7 +23,8 @@ scatter_button = st.button('Generar Diagrama de Dispersion')
 
 if scatter_button:
     st.write('Generado: Diagrama de Dispersion con datos para la promocion de vehiculos usados')
-    fig = px.scatter(source, x='odometer', y='price')
+    fig = px.scatter(source, x='odometer', y='price',
+                     x_label='Odometer (KM)', y_label='Price (USD)')
     st.plotly_chart(fig, use_container_width=True)
 
 #Sub-Header insertion
@@ -33,12 +35,14 @@ hist_checkbox = st.checkbox('Generar Histograma')
 
 if hist_checkbox:
     st.write('Generado: Histograma con datos odometricos para la promocion de vehiculos usados')
-    fig = px.histogram(source, x='odometer')
+    fig = px.histogram(source, x='odometer',
+                       x_label='Odometer (KM)')
     st.plotly_chart(fig, use_container_width=True)
 
 scatter_checkbox = st.checkbox('Generar Diagrama de Dispersion')
 
 if scatter_checkbox:
     st.write('Generado: Diagrama de Dispersion con datos para la promocion de vehiculos usados')
-    fig = px.scatter(source, x='odometer', y='price')
+    fig = px.scatter(source, x='odometer', y='price',
+                     x_label='Odometer (KM)', y_label='Price (USD)')
     st.plotly_chart(fig, use_container_width=True)
